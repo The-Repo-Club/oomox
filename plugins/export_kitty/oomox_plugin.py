@@ -118,7 +118,7 @@ class KittyExportDialog(ExportDialog):
         super().__init__(
             *args,
             headline=_("Terminal Colorscheme"),
-            height=440,
+            height=540,
             **kwargs
         )
         self.label.set_text(_('Paste this colorscheme to your ~/.config/kitty/kitty.conf:'))
