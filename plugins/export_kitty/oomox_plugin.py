@@ -15,15 +15,14 @@ from oomox_gui.color import (
 )
 from oomox_gui.config import USER_CONFIG_DIR
 
-# Enable Base16 export if pystache and yaml are installed:
+# Enable Kitty export if pystache are installed:
 try:
     import pystache  # noqa  pylint: disable=unused-import
-    import yaml  # noqa  pylint: disable=unused-import
 except ImportError:
     # @TODO: replace to error dialog:
     print(
-        "!! WARNING !! `pystache` and `python-yaml` need to be installed "
-        "for exporting Base16 themes"
+        "!! WARNING !! `pystache` need to be installed "
+        "for exporting Kitty themes"
     )
 
     class PluginBase(OomoxImportPlugin):  # pylint: disable=abstract-method
@@ -122,7 +121,7 @@ class KittyExportDialog(ExportDialog):
             height=440,
             **kwargs
         )
-        self.label.set_text(_('Paste this colorscheme to your ~/.config/alacritty/alacritty.yml:'))
+        self.label.set_text(_('Paste this colorscheme to your ~/.config/kitty/kitty.conf:'))
         self.scrolled_window.show_all()
         try:
             # RENDER
@@ -138,9 +137,9 @@ class KittyExportDialog(ExportDialog):
 
 class Plugin(OomoxExportPlugin):
 
-    name = 'alacritty'
+    name = 'kitty'
 
-    display_name = _('Alacritty')
+    display_name = _('Kitty')
     shortcut = "<Primary>X"
-    export_text = _("Export _Alacritty theme…")
+    export_text = _("Export _Kitty theme…")
     export_dialog = KittyExportDialog
