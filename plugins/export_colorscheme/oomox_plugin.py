@@ -15,9 +15,10 @@ from oomox_gui.color import (
 from oomox_gui.export_common import ExportConfig
 from oomox_gui.config import USER_CONFIG_DIR
 
-# Enable ColorScheme export if pystache are installed:
+# Enable ColorScheme export if pystache and yaml are installed:
 try:
     import pystache  # noqa  pylint: disable=unused-import
+    import yaml  # noqa  pylint: disable=unused-import
 except ImportError:
     # @TODO: replace to error dialog:
     print(
