@@ -324,6 +324,24 @@ class Plugin(OomoxExportPlugin):
     name = 'colorscheme'
 
     display_name = _('ColorScheme')
+    description = (
+        'Alacritty, Kitty'
+    )
+    about_text = 'Export all kinds of color schemes'
+    about_links = [
+        {
+            'name': 'Homepage',
+            'url': 'https://github.com/The-Repo-Club/oomox/tree/main/plugins/export_colorscheme',
+        },
+        {
+            'name': 'Alacritty',
+            'url': 'https://github.com/The-Repo-Club/oomox-templates/tree/main/alacritty/templates',
+        },
+        {
+            'name': 'Kitty',
+            'url': 'https://github.com/The-Repo-Club/oomox-templates/tree/main/kitty/templates',
+        },
+    ]
     shortcut = "<Primary>X"
     export_text = _("Export _Color Scheme…")
     export_dialog = ColorSchemeExportDialog
