@@ -342,7 +342,7 @@ class Plugin(OomoxExportPlugin):
             'url': 'https://github.com/The-Repo-Club/oomox-templates/tree/main/kitty/templates',
         },
     ]
-    shortcut = "<Primary>X"
+    shortcut = "<Primary>C"
     export_text = _("Export _Color Scheme…")
     export_dialog = ColorSchemeExportDialog
 
